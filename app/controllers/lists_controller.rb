@@ -22,15 +22,15 @@ class ListsController < ApplicationController
     end
 end
 
-  def update
-    @list = List.find(params[:id])
-    if @list.save
-      redirect_to list_path(@list)
-    else
-      render :update
-    end
-  end
-  
+  # def update
+  #   @list = List.find(params[:id])
+  #   if @list.save
+  #     redirect_to list_path(@list)
+  #   else
+  #     render :update
+  #   end
+  # end
+
   private
   def list_params
     params.require(:list).permit(:name, :description)
