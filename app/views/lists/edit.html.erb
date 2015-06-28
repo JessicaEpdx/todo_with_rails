@@ -1,0 +1,9 @@
+<h1>Edit List: <%=@list.name%> </h1>
+
+<%= form_for @list do |f| %>
+  <%= f.label "New Name" %>
+  <%= f.text_field :name%>
+  <%= f.submit %>
+<% end %>
+
+<p><%= link_to "Return to Lists", lists_path %></p>
